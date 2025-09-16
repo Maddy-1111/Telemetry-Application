@@ -39,3 +39,8 @@
 
 # debug information files
 *.dwo
+
+
+.vscode/
+full_test_telemetry.cpp
+telemetrylib_ans.cpp
