@@ -1,4 +1,4 @@
-# Telemetry-Application
+# Telemetry Application
 This repo contains the telemetry coding question which is part of the electrical application of Agnirath
 
 ### The situation:
@@ -11,9 +11,9 @@ This repo contains the telemetry coding question which is part of the electrical
 ### The requirements:
 - You must design a system (an encoder function and a decoder function) that takes in any input string and gets it across to the other side
 - The hardware restricts you to transmit data packets only as a bytestream with a maximum length of 100 bytes each
-- You must only transmit data that is correct, you cannot affort to relay corrupted data.
+- You must only transmit data that is correct, you cannot affort to relay any corrupted data.
 - However, loss of information is acceptable as the transmission is not in your hand
-- The output should be the validity flag and the original string. (Note: if the data has been corrupted, you may return an empty string)
+- The output should be the validity flag and the original string. (Note: even if one of the packets is corrupted / lost, the validity should be false and the output should be an empty string)
 
 ### More explicitly:
 - There is a telemetrylib.cpp file, which contain 2 main funcitons: encode_data and decode_data.
@@ -28,3 +28,4 @@ This repo contains the telemetry coding question which is part of the electrical
 
 ### Clarifications:
 - Your decode_data function does not have context of the original string, all it gets is a list of packets from which it must reconstruct as well as verify the original string.
+- Your outputs of the decode_data would either be {true, "original string"} or {false, ""}
